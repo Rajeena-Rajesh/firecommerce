@@ -6,6 +6,8 @@ import CartPage from './pages/CartPage';
 import ProductInfo from './pages/ProductInfo';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+
+import './stylesheet/Layout.css'
 function App() {
   return (
     <div className="App">

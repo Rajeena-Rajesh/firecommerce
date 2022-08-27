@@ -1,0 +1,35 @@
+.navbar{
+    background-color: darkcyan !important;
+} 
+
+.navbar-brand{
+    color:white !important;
+    font-weight: bold;
+}
+
+.nav-link{
+    color:white !important;
+}
+
+.footer{
+    background-color:darkcyan  ;
+    text-align: center;
+    padding:10px;
+    color:white;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0; 
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:2;
+}
+
+.content{
+    padding-top:80px;
+}

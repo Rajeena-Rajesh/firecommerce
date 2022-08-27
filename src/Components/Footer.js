@@ -2,8 +2,10 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>
-      <h2>Footer</h2>
+    <div className='footer'>
+     <p>Designed and Developed By</p>
+     <hr />
+     <p>Rajeena VR</p>
     </div>
   )
 }
