@@ -10,3 +10,22 @@
     min-height :3.0rem;
 }
 
+.product-actions{
+position:absolute;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+top:0;
+left:0;
+right:0;
+opacity: 0;
+height:100%;
+background-color:rgba(0, 0, 0, 0.8);
+color:white;
+font-weight:bold !important;
+}
+
+.product:hover .product-actions{
+opacity:1;
+}

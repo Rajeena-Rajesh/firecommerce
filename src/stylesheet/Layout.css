@@ -33,3 +33,15 @@
 .content{
     padding-top:80px;
 }
+
+button{
+    border:1px solid rgba(255, 255, 255, 0.589);
+    box-shadow: none;
+    color:white;
+    background: darkcyan;
+    padding:5px;
+}
+
+button:hover{
+    background-color: brown;
+}
