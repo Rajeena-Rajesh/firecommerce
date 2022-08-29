@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 
 import './stylesheet/Layout.css'
+import './stylesheet/products.css'
 function App() {
   return (
     <div className="App">
