@@ -29,3 +29,7 @@ font-weight:bold !important;
 .product:hover .product-actions{
 opacity:1;
 }
+
+.product-img-info{
+    height:70vh;
+}

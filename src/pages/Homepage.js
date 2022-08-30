@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../Components/Layout'
 import {collection,getDocs} from "firebase/firestore"
 import fireDB from '../fireconfig';
+import { useNavigate } from 'react-router-dom';
+
 //import { fireproducts } from '../firecommerce-products';
 
  
@@ -9,6 +11,8 @@ import fireDB from '../fireconfig';
 
 function Homepage() {
 const[products,setProducts]=useState([])
+
+const navigate=useNavigate()
  useEffect(()=>{
   getData()
  },[])
@@ -49,7 +53,9 @@ users.forEach((doc) => {
                   <h2>{product.price}Rs /-</h2>
                   <div className="d-flex">
                     <button className='mx-2'>ADD TO CART</button>
-                    <button>VIEW</button>
+                    <button onClick={()=>{
+                      navigate(`/productInfo/${product.id}`)
+                    }}>VIEW</button>
                   </div>
                 </div>
                </div>
