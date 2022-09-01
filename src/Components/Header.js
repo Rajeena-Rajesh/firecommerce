@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaCartPlus } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 function Header() {
   const { cartItems } = useSelector((state) => state.cartReducer);
   

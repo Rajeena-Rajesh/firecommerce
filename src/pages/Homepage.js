@@ -9,6 +9,7 @@ import {useDispatch,useSelector} from 'react-redux'
  
 function Homepage() {
 const[products,setProducts]=useState([])
+const[loading, setLoading]=useState(false)
 const {cartItems} =useSelector(state=>state.cartReducer)
 
 const dispatch=useDispatch()
@@ -19,7 +20,7 @@ const navigate=useNavigate()
 
        async function getData(){
         try {
-        
+        setLoading(true)
           const users=await getDocs(collection(fireDB, "products"));
 const productsArray=[]
 users.forEach((doc) => {
@@ -29,10 +30,12 @@ users.forEach((doc) => {
     ...doc.data()
   }
   productsArray.push(obj)
+  setLoading(false)
 });
  setProducts(productsArray)
         } catch (error) {
          console.log(error)
+         setLoading(true)
         }
           } 
 
@@ -46,7 +49,7 @@ const addToCart=(product)=>{
 
 
   return (
-    <Layout>
+    <Layout loading={loading}>
      <div className="container">
       <div className="row">
         {
