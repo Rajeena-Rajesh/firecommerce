@@ -33,3 +33,17 @@ opacity:1;
 .product-img-info{
     height:70vh;
 }
+
+.total-amount{
+    background-color: skyblue;
+    padding:10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+   
+    font-weight: bold;
+}
+
+.total-amount:hover{
+    background-color: darkcyan ;
+    color: beige;
+}
