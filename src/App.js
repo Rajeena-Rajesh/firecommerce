@@ -9,6 +9,8 @@ import RegisterPage from './pages/RegisterPage';
 
 import './stylesheet/Layout.css'
 import './stylesheet/products.css'
+import './stylesheet/Authentication.css'
+
 function App() {
   return (
     <div className="App">

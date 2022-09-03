@@ -5,6 +5,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+
+body, html{
+    overflow-x:hidden !important;
+}
 code{
     font-family: 'Montserrat', sans-serif;
 }
