@@ -1,7 +1,7 @@
 
 import './App.css';
 import Homepage from './pages/Homepage';
-import {Route, BrowserRouter,Routes} from 'react-router-dom'
+import {Route, BrowserRouter,Routes,Navigate} from 'react-router-dom'
 import CartPage from './pages/CartPage';
 import ProductInfo from './pages/ProductInfo';
 import LoginPage from './pages/LoginPage';
@@ -18,9 +18,9 @@ function App() {
          <ToastContainer/>
       <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<Homepage/>}/>
-        <Route path="/CartPage" exact element={<CartPage/>}/>
-        <Route path="/ProductInfo/:productid" exact element={<ProductInfo/>}/>
+        <Route path="/" exact element={<protectedRoutes><Homepage/></protectedRoutes>}/>
+        <Route path="/CartPage" exact element={<protectedRoutes><CartPage/></protectedRoutes>}/>
+        <Route path="/ProductInfo/:productid" exact element={<protectedRoutes><ProductInfo/></protectedRoutes>}/>
         <Route path="/LoginPage" exact element={<LoginPage/>}/>
         <Route path="/RegisterPage" exact element={<RegisterPage/>}/>
       </Routes>
@@ -30,3 +30,11 @@ function App() {
 }
 
 export default App;
+
+export const protectedRoutes=({children})=>{
+  if(localStorage.getItem('currentUser')){
+    return children
+  }else{
+    <Navigate to ='/LoginPage'/>
+  }
+}
