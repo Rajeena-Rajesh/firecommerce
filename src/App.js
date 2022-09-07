@@ -10,10 +10,12 @@ import RegisterPage from './pages/RegisterPage';
 import './stylesheet/Layout.css'
 import './stylesheet/products.css'
 import './stylesheet/Authentication.css'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className="App">
+         <ToastContainer/>
       <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Homepage/>}/>
